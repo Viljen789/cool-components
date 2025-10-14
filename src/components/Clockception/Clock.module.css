@@ -1,0 +1,33 @@
+.frame{
+    position: relative;
+    height: 3rem;
+    width: 3rem;
+    background: black;
+    border: 0.25rem solid lightslategray;
+
+}
+.hand{
+    height: 0.1875rem;
+    background: yellow;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: 0% -50%;
+    width: 50%;
+    transform-origin: center left;
+}
+.hand:nth-child(1){
+    rotate: 0deg;
+}
+.hand:nth-child(2){
+    rotate: 90deg;
+}
+
+.digit{
+    display: grid;
+    grid-template:
+            repeat(6, 1fr) /
+            repeat(4, 1fr);
+    gap: 0.125rem;
+    border: 2px solid red;
+}
