@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import cx from 'classnames';
 import styles from './Clock.module.css';
-import { digitsMapSmall } from '../Digits14x8.jsx';
+import { digitsMapSmall } from '../../Digits14x8.jsx';
 
 const Hand = () => <div className={styles.hand} />;
 const Frame = ({ className, ...rest }) => (
@@ -34,15 +34,21 @@ const Clock = () => {
   const hours = now.getHours().toString().padStart(2, '0');
 
   return (
-    <div className={styles.fullClock}>
+    <div className={styles.fullClock} data-particle-block="true">
       <div className={styles.digit}>
         {Array.from({ length: 24 }, (_, i) => (
-          <Frame key={i} className={styles[options[digitsMapSmall[hours[0]][i]]]} />
+          <Frame
+            key={i}
+            className={styles[options[digitsMapSmall[hours[0]][i]]]}
+          />
         ))}
       </div>
       <div className={styles.digit}>
         {Array.from({ length: 24 }, (_, i) => (
-          <Frame key={i} className={styles[options[digitsMapSmall[hours[1]][i]]]} />
+          <Frame
+            key={i}
+            className={styles[options[digitsMapSmall[hours[1]][i]]]}
+          />
         ))}
       </div>
       <div className={styles.comma}>
@@ -52,12 +58,18 @@ const Clock = () => {
       </div>
       <div className={styles.digit}>
         {Array.from({ length: 24 }, (_, i) => (
-          <Frame key={i} className={styles[options[digitsMapSmall[minutes[0]][i]]]} />
+          <Frame
+            key={i}
+            className={styles[options[digitsMapSmall[minutes[0]][i]]]}
+          />
         ))}
       </div>
       <div className={styles.digit}>
         {Array.from({ length: 24 }, (_, i) => (
-          <Frame key={i} className={styles[options[digitsMapSmall[minutes[1]][i]]]} />
+          <Frame
+            key={i}
+            className={styles[options[digitsMapSmall[minutes[1]][i]]]}
+          />
         ))}
       </div>
       <div className={styles.comma}>
@@ -68,12 +80,18 @@ const Clock = () => {
 
       <div className={styles.digit}>
         {Array.from({ length: 24 }, (_, i) => (
-          <Frame key={i} className={styles[options[digitsMapSmall[seconds[0]][i]]]} />
+          <Frame
+            key={i}
+            className={styles[options[digitsMapSmall[seconds[0]][i]]]}
+          />
         ))}
       </div>
       <div className={styles.digit}>
         {Array.from({ length: 24 }, (_, i) => (
-          <Frame key={i} className={styles[options[digitsMapSmall[seconds[1]][i]]]} />
+          <Frame
+            key={i}
+            className={styles[options[digitsMapSmall[seconds[1]][i]]]}
+          />
         ))}
       </div>
     </div>

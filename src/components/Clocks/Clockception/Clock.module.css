@@ -6,6 +6,7 @@
   border: 0.25rem solid lightgray;
   border-radius: 50%;
 }
+
 .hand {
   height: 0.1875rem;
   background: black;
@@ -17,10 +18,12 @@
   transform-origin: center left;
   transition: rotate 0.3s ease-in-out;
 }
+
 .leftDown {
   .hand:nth-child(1) {
     rotate: 180deg;
   }
+
   .hand:nth-child(2) {
     rotate: 90deg;
   }
@@ -30,22 +33,27 @@
   .hand:nth-child(1) {
     rotate: 0deg;
   }
+
   .hand:nth-child(2) {
     rotate: 180deg;
   }
 }
+
 .rightDown {
   .hand:nth-child(1) {
     rotate: 0deg;
   }
+
   .hand:nth-child(2) {
     rotate: 90deg;
   }
 }
+
 .rightUp {
   .hand:nth-child(1) {
     rotate: -90deg;
   }
+
   .hand:nth-child(2) {
     rotate: 0deg;
   }
@@ -55,6 +63,7 @@
   .hand:nth-child(1) {
     rotate: -90deg;
   }
+
   .hand:nth-child(2) {
     rotate: 180deg;
   }
@@ -70,6 +79,7 @@
   .hand:nth-child(1) {
     rotate: 90deg;
   }
+
   .hand:nth-child(2) {
     rotate: -90deg;
   }
@@ -81,6 +91,7 @@
     repeat(6, 1fr) /
     repeat(4, 1fr);
 }
+
 .comma {
   display: grid;
   grid-template:
@@ -90,4 +101,8 @@
 
 .fullClock {
   display: flex;
+  position: relative;
+  justify-content: center;
+  margin: 0 auto;
+  width: max-content;
 }

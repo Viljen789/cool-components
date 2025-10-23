@@ -1,11 +1,11 @@
 import './App.css';
-import Clock from './components/Clockception/Clock.jsx';
-import ParticleCounter from './components/ParticleCounter/ParticleCounter.jsx';
+import Clock from './components/Clocks/Clockception/Clock.jsx';
+import ParticleCounter from './components/Clocks/ParticleClock/ParticleCounter.jsx';
 
 function App() {
   return (
-    <div>
-      {/*<Clock />*/}
+    <div className="App">
+      <Clock />
       <ParticleCounter />
     </div>
   );
